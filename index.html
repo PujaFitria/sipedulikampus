@@ -1,79 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Bootstrap Icon -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
-
-    <title>sipedulikampus</title>
-</head>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-<body>
-<div class="col-md-12">
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #104c40">
-  <div class="container-fluid">
-    <a class="navbar-brand fw-bold ms-5" href="#">
-        <img src="img/uin.png" alt="logo" width="40" height="34"> SI-Peduli Kampus
-    </a>
-    <a class=" btn text-light fs-6 ms-2" style="background-color: #d1a446" href="?menu=5">Masuk</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="index.php"><i class="bi bi-house"></i> Beranda</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Pengaduan
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="?menu=2">Buat Pengaduan</a></li>
-            <li><a class="dropdown-item" href="?menu=3">Riwayat Pengaduan</a></li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" href="?menu=6"><i class="bi bi-person"></i> Akun</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-</div>
-<p>
-<div class="container">
-<div class="row justify-content-md-center">
-
-<body id="home">
-<div class="col-md-12 mt-6">
-  <div class="row align-items-center col-md-12 mt-3">
-        <div class="col-md-7 mt-5">
-          <h1 class="text-start fs-1 ms-5" style="color: #104c40">SI-Peduli Kampus </h1>
-          <h1 class="text-start fs-4 ms-5" style="color: #104c40">Sistem Informasi Pengaduan Layanan Kampus </h1>
-          <a class="w-50 btn text-light ms-5 mb-2 mt-3" href="?menu=7" style="background-color: #d1a446" >SOP</a><br>
-          <a class="w-50 btn text-light ms-5 mb-2" href="?menu=2" style="background-color: #d1a446" >Buat Pengaduan</a>
-        </div>
-        <div class="col-md-5 mt-5">
-          <img src="img/uin.png" width="350">
-        </div>
-  </div>
-</div>
-</body>
 
 <?php 
-
+include "header.php";
 //Isi atau Content 
-//http://localhost/sipedulikampus/index.html
-//http://localhost/sipedulikampus/index.html?menu=1
+//http://localhost/sipedulikampus/index.php
+//http://localhost/sipedulikampus/index.php?menu=1
 if(isset($_GET['menu'])){
     if($_GET['menu']==2){
         include "pengaduan.php";    
     }else if($_GET['menu']==3){
         include "riwayat.php";
-    
+    }else if($_GET['menu']==4){
+        include "form_edit.php";
     }else if($_GET['menu']==5){
         include "masuk.php";
     }else if($_GET['menu']==6){
@@ -86,97 +23,5 @@ if(isset($_GET['menu'])){
 }else{
     include "home.php";
 }
-
+include "footer.php";
 ?>
-
-</div>
-</div>
-
-<div class="container pt-5 pb-5">
-    <h2 class="fs-3 text-center" id="faq">FAQ</h2>
-    <div class="row row-cols-1 row-cols-md-2 g-4 pt-4">
-      <div class="col">
-        <div class="accordion" id="accordion1">
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
-                Apakah Layanan ini Gratis?
-              </button>
-            </h2>
-            <div id="faq1" class="accordion-collapse collapse ">
-              <div class="accordion-body"><h6>layanan ini disediakan secara gratis dan dapat diakses oleh seluruh
-                 pengguna tanpa dipungut biaya.</h6>Kami berkomitmen untuk memberikan layanan yang mudah diakses dan bermanfaat bagi masyarakat. 
-                Apabila di kemudian hari terdapat fitur tambahan berbayar, informasi tersebut akan disampaikan secara jelas dan terbuka.</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="accordion" id="accordion2">
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
-                Bagaimana Cara mengakses Layanan ini?
-              </button>
-            </h2>
-            <div id="faq2" class="accordion-collapse collapse">
-              <div class="accordion-body"><h6>Layanan ini dapat diakses secara langsung melalui situs resmi kami menggunakan perangkat yang terhubung ke internet.
-                </h6>Pengguna cukup membuka halaman utama dan mengikuti petunjuk yang tersedia untuk mulai menggunakan 
-                layanan tanpa perlu mengunduh aplikasi atau melakukan registrasi, kecuali jika dinyatakan sebaliknya pada fitur tertentu.</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="accordion" id="accordion3">
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
-                Pertanyaan 3
-              </button>
-            </h2>
-            <div id="faq3" class="accordion-collapse collapse">
-              <div class="accordion-body">Jawaban 3</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="accordion" id="accordion4">
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
-                Pertanyaan 4
-              </button>
-            </h2>
-            <div id="faq4" class="accordion-collapse collapse">
-              <div class="accordion-body">Jawaban 4</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-    <footer class="text-white text-center py-4 mt-5" style="background-color: #104c40">
-      <div class="container">
-        <p class="mb-2">© 2025 Si-Peduli Kampus. All Rights Reserved.</p>
-        <div class="mb-auto d-flex justify-content-center gap-4" style="margin-left: 50px;"> <!-- Menambahkan margin kiri yang lebih besar -->
-          <a href="https://www.instagram.com" class="btn btn-custom" target="_blank">
-            <i class="fab fa-instagram"></i> Instagram
-          </a>
-          <a href="https://www.twitter.com" class="btn btn-custom" target="_blank">
-            <i class="fab fa-twitter"></i> Twitter
-          </a>
-          <a href="https://www.facebook.com" class="btn btn-custom" target="_blank">
-            <i class="fab fa-facebook"></i> Facebook
-          </a>
-        </div>
-      </div>
-    </footer>
-
-
-</body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
-</html>
