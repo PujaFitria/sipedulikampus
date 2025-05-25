@@ -1,6 +1,6 @@
 
 <?php 
-include "hf.html";
+include "header.html";
 //Isi atau Content 
 //http://localhost/sipedulikampus/index.html
 
@@ -22,4 +22,5 @@ if(isset($_GET['menu'])){
 }else{
     
 }
+include "footer.php";
 ?>
