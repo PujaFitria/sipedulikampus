@@ -1,3 +1,28 @@
+<?php 
+include "header.html";
+//Isi atau Content 
+//http://localhost/sipedulikampus/index.html
+
+if(isset($_GET['menu'])){
+    if($_GET['menu']==2){
+        include "pengaduan.html";    
+    }else if($_GET['menu']==3){
+        include "riwayat.php";
+
+    }else if($_GET['menu']==5){
+        include "masuk.php";
+    }else if($_GET['menu']==6){
+        include "akun.php";
+    }else if($_GET['menu']==7){
+        include "sop.php";
+    }else {
+        echo "Pilih Menu";
+    }
+}else{
+    
+}
+include "footer.php";
+?>
 <!-- Home -->
 <body id="home">
 <div class="col-md-12 mt-6">
