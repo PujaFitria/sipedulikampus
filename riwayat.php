@@ -34,7 +34,7 @@
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="pengaduan.html">Buat Pengaduan</a></li>
-            <li><a class="dropdown-item" href="riwayat.html">Riwayat Pengaduan</a></li>
+            <li><a class="dropdown-item" href="riwayat.php">Riwayat Pengaduan</a></li>
           </ul>
         </li>
         <li class="nav-item">
