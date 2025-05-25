@@ -57,7 +57,7 @@
           <h1 class="text-start fs-1 ms-5" style="color: #104c40">SI-Peduli Kampus </h1>
           <h1 class="text-start fs-4 ms-5" style="color: #104c40">Sistem Informasi Pengaduan Layanan Kampus </h1>
           <a class="w-50 btn text-light ms-5 mb-2 mt-3" href="?menu=7" style="background-color: #d1a446" >SOP</a><br>
-          <a class="w-50 btn text-light ms-5 mb-2" href="?menu=2" style="background-color: #d1a446" >Buat Pengaduan</a>
+          <a class="w-50 btn text-light ms-5 mb-2" href="#pengaduan" style="background-color: #d1a446" >Buat Pengaduan</a>
         </div>
         <div class="col-md-5 mt-5">
           <img src="img/uin.png" width="350">
@@ -69,6 +69,59 @@
 </div>
 </div>
 
+<!-- Buat Pengaduan -->
+<section id="pengaduan">
+<div class="col-lg-8 mt-5">
+<h1>Tulis Resep di resapi</h1>
+<div class="container py-4">
+	<form class="row g-2" method='POST' action="ajukan.php">
+		
+        <div class="col-6">
+		    <label for="nama">Nama</label>
+		    <input type="text" class="form-control" name="nama" id="nama" required>    
+		</div>
+		<div class="col-6">
+            <td style="width: 50%;">
+                <label for="role">Role</label>
+                <select class="form-select" name="role" id="role">
+                    <option selected disabled>Pilih Role</option>
+                    <option value="Mahasiswa">Mahasiswa</option>
+                    <option value="Dosen">Dosen</option>
+                    <option value="Staff">Staff</option>
+                </select>
+            </td>
+        </div>
+		<div class="form-group">
+			<label for="judul">Judul</label>
+			<input class="form-control" name="judul" id="judul" required ></input>
+		</div>
+		<div class="form-group">
+			<label for="deskripsi">Deskripsi</label>
+			<textarea class="form-control" name="deskripsi" rows="4" id="deskripsi" required ></textarea>
+		</div>
+		<div class="form-group">
+			<tr>
+              <td colspan="2">
+                <label for="foto" class="form-label">Bukti Foto</label>
+                <input class="form-control" type="file" name="foto" id="foto">
+              </td>
+            </tr>
+		</div>
+		<div class="form-check mb-3">
+          <input class="form-check-input" type="checkbox" id="konfirmasi" required>
+          <label class="form-check-label" for="konfirmasi">
+            Saya menyatakan bahwa data yang saya isi sudah benar dan siap untuk dikirim.
+          </label>
+        </div>
+        
+		<div class=text-center>
+		    <button type="submit" class="btn col-3" style="background-color: #d1a446">Kirim Pengaduan</button>
+        </div>
+	</form>
+</div>
+</div>
+</section>
+    
 <!-- FAQ -->
 <div class="container pt-5 pb-5">
     <h2 class="fs-3 text-center" id="faq">FAQ</h2>
