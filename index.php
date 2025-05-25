@@ -5,10 +5,7 @@ include "header.html";
 //http://localhost/sipedulikampus/index.html
 
 if(isset($_GET['menu'])){
-    if($_GET['menu']==3){
-        include "riwayat.php";
-
-    }else if($_GET['menu']==5){
+    if($_GET['menu']==5){
         include "masuk.php";
     }else if($_GET['menu']==6){
         include "akun.php";
