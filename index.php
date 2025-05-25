@@ -1,6 +1,6 @@
 
 <?php 
-include "index.html";
+include "hf.html";
 //Isi atau Content 
 //http://localhost/sipedulikampus/index.html
 
