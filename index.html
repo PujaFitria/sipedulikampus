@@ -48,17 +48,16 @@
 <div class="row justify-content-md-center">
 
 <?php 
-include "header.php";
+
 //Isi atau Content 
-//http://localhost/sipedulikampus/index.php
-//http://localhost/sipedulikampus/index.php?menu=1
+//http://localhost/sipedulikampus/index.html
+//http://localhost/sipedulikampus/index.html?menu=1
 if(isset($_GET['menu'])){
     if($_GET['menu']==2){
         include "pengaduan.php";    
     }else if($_GET['menu']==3){
         include "riwayat.php";
-    }else if($_GET['menu']==4){
-        include "form_edit.php";
+    
     }else if($_GET['menu']==5){
         include "masuk.php";
     }else if($_GET['menu']==6){
@@ -71,7 +70,7 @@ if(isset($_GET['menu'])){
 }else{
     include "home.php";
 }
-include "footer.php";
+
 ?>
 
 </div>
