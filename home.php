@@ -1,3 +1,4 @@
+<!-- Home -->
 <body id="home">
 <div class="col-md-12 mt-6">
   <div class="row align-items-center col-md-12 mt-3">
