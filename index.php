@@ -6,7 +6,7 @@
 
 if(isset($_GET['menu'])){
     if($_GET['menu']==2){
-        include "pengaduan.php";    
+        include "pengaduan.html";    
     }else if($_GET['menu']==3){
         include "riwayat.php";
 
